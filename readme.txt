@@ -16,3 +16,13 @@ EditorRoutine.StartRoutine(2f, () => IsComplete, () => {
   //...
   //wait 2sc and wait until IsComplete is true, then runs.
 });
+
+
+--------------
+
+var routine = EditorRoutine.StartRoutine(() => IsComplete, () => { 
+  //...
+  //wait until IsComplete is true, and run.
+});
+
+EditorRoutine.StopRoutine(routine); // Stops routine.
