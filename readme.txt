@@ -20,9 +20,10 @@ EditorRoutine.StartRoutine(2f, () => IsComplete, () => {
 
 --------------
 
-var routine = EditorRoutine.StartRoutine(() => IsComplete, () => { 
+var routine = EditorRoutine.StartRoutine(() => IsComplete, Execute);
+
+private void Execute() {
   //...
-  //wait until IsComplete is true, and run.
-});
+}
 
 EditorRoutine.StopRoutine(routine); // Stops routine.
